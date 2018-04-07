@@ -4,15 +4,32 @@ import React, { Component } from 'react';
 //import './WikiViewer.js';
 
 class WikiViewer extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.getSearchTerm = (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        console.log("Current Term:" + e.target.value);
+      }
+    };
+
+  }
   render() {
+
     return (
-      <p className="Main">
-        <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">click on me for a random article! <br/></a>
+      <div>
+        <p>
+          <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">click on me for a random article! <br/></a>
+        </p>
         <form>
-          <input type="text" name="searchTerm"/><br/>
+          <input type="text" name="searchTerm" onKeyPress={ this.getSearchTerm } /><br/>
         </form>
-        write in text box for a search<br/>
-      </p>
+        <p>
+          write in text box for a search<br/>
+        </p>
+      </div>
     );
   }
 }
