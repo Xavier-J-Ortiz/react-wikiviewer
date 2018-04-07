@@ -7,7 +7,7 @@ class WikiViewer extends Component {
   render() {
     return (
       <p className="Main">
-        click on me for a random article! <br/>
+        <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">click on me for a random article! <br/></a>
         <form>
           <input type="text" name="searchTerm"/><br/>
         </form>
