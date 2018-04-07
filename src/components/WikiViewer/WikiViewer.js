@@ -11,7 +11,8 @@ class WikiViewer extends Component {
     this.getSearchTerm = (e) => {
       if (e.key === 'Enter') {
         e.preventDefault();
-        console.log("Current Term:" + e.target.value);
+        let searchURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + encodeURI(e.target.value) + "&limit=10&namespace=0&format=json";
+        console.log(searchURL);
       }
     };
 
