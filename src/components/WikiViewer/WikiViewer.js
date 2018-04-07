@@ -6,9 +6,13 @@ import React, { Component } from 'react';
 class WikiViewer extends Component {
   render() {
     return (
-        <p className="Main">
-          place wikiviewer here
-        </p>
+      <p className="Main">
+        click on me for a random article! <br/>
+        <form>
+          <input type="text" name="searchTerm"/><br/>
+        </form>
+        write in text box for a search<br/>
+      </p>
     );
   }
 }
